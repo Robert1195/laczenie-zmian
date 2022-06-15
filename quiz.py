@@ -2,8 +2,11 @@ import json
 
 points = 0
 
+
 def succes(points):
     print("To dobra odpowiedź, brawo! Masz już", points, "punktów.")
+def wrong_answer(correct_answer):
+    print("To zła odpowiedź, prawidłowa odpowiedź to " + correct_answer + ".")
 
 def show_question(question):
     global points
@@ -22,7 +25,7 @@ def show_question(question):
         points += 1
         succes(points)
     else:
-        print("To zła odpowiedź, prawidłowa odpowiedź to " + question["prawidlowa_odpowiedz"] + ".")
+        wrong_answer(question["prawidłowa_odpowiedź"])
 
 
 with open("quiz.json", encoding="utf-8") as json_file:
