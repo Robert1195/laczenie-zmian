@@ -17,7 +17,7 @@ def show_question(question):
 
     if answer == question["prawidlowa_odpowiedz"]:
         points += 1
-        print("To prawidłowa odpowiedź, brawo! Masz już", points, "punktów.")
+        print("To dobra odpowiedź, brawo! Masz już", points, "punktów.")
     else:
         print("Niestety to zła odpowiedź, prawidłowa odpowiedź to " + question["prawidlowa_odpowiedz"] + ".")
 
